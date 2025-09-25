@@ -260,7 +260,7 @@ export default function ContactForm() {
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
                 className="bg-slate-700 border-slate-600 text-white focus:border-primary"
-                placeholder="+1 (555) 123-4567"
+                placeholder="+1 437 345 3584"
               />
               {errors.phone && (
                 <p className="text-red-400 text-sm mt-1 flex items-center">

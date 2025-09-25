@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import ContactForm from "@/components/ContactForm";
@@ -27,7 +25,8 @@ import {
   Lightbulb,
   Target,
   Award,
-  Clock
+  Clock,
+  Mail
 } from "lucide-react";
 
 export default function Home() {
@@ -42,6 +41,7 @@ export default function Home() {
         <input type="text" name="service" />
         <textarea name="message"></textarea>
       </form>
+
       {/* Navigation */}
       <nav className="flex items-center justify-between p-4 lg:px-8">
         <div className="flex items-center space-x-2">
@@ -78,13 +78,11 @@ export default function Home() {
               <p className="text-gray-300 text-lg mb-8 max-w-2xl">
                 We collaborate closely with your team, combining cutting-edge technology with strategic insight to deliver innovative solutions that drive impactful change and long-term success, shaping the future of your business
               </p>
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Contact Us
-              </Button>
+              <a href="#contact">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg">
+                  Contact Us
+                </Button>
+              </a>
             </div>
             <div className="flex justify-center">
               <div className="relative">
@@ -419,7 +417,7 @@ export default function Home() {
           <ContactForm />
 
           <div className="mt-16 text-center">
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="h-6 w-6 text-white" />
@@ -429,10 +427,17 @@ export default function Home() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">Email Us</h3>
+                <p className="text-gray-400">info@venturehubgroup.ca</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Building className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Visit Us</h3>
-                <p className="text-gray-400">123 Innovation Drive<br />Tech City, TC 12345</p>
+                <p className="text-gray-400">5 Hollidge Boulevard<br />Aurora, Ontario, L4G 7H2</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
